@@ -18,6 +18,9 @@ import PhoneRoundedIcon from "@mui/icons-material/PhoneRounded";
 import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
 
 const Navbar = () => {
+  const handleSignUp = () => {
+    window.location.href = 'https://firebase-auth-blue.vercel.app/';
+  };
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
@@ -51,7 +54,7 @@ const Navbar = () => {
         <a href="">About</a>
         <a href="">Contact</a>
         
-        <button className="primary-button">Sign In</button>
+        <button className="primary-button" onClick={handleSignUp} >Sign In</button>
       </div>
       <div className="navbar-menu-container">
         <HiOutlineBars3 onClick={() => setOpenMenu(true)} />
